@@ -6,6 +6,10 @@
         
         public $user;  
         public $pass; 
+        
+        public function __construct(){
+            
+        }
 
         public function setUser($user){
             
