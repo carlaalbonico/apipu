@@ -5,7 +5,7 @@
         echo $parametro;
         return 1;
     }
-
+/*
     function buscarNombreUsuario($nombreUsuario, $contrasenaUsuario){
         $usuarios = leerArchivoUsuarios();
 
@@ -18,10 +18,10 @@
         }
 
         $tempUsuario = new Usuario();
-        $tempUsuario->setNombre($usuariosArray[$resultado]->{"usuario"});
-        $tempUsuario->setContrasena($usuariosArray[$resultado]->{"contrasena"});
+        $tempUsuario->setUser($usuariosArray[$resultado]->{"usuario"});
+        $tempUsuario->setPass($usuariosArray[$resultado]->{"contrasena"});
 
-        if($tempUsuario->getContrasena() == $contrasenaUsuario){
+        if($tempUsuario->getUser() == $contrasenaUsuario){
             $resultado = true;
             return $resultado;
         }
@@ -95,6 +95,6 @@
         $usuariosString = json_encode($usuariosArray);
 
         escribirArchivoUsuarios($usuariosString);
-    }
+    }*/
 
 ?>
