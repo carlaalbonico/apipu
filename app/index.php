@@ -43,11 +43,11 @@ $app->add(function (Request $request, RequestHandlerInterface $handler): Respons
 });
 
 
-$app->get('/', function (Request $request, Response $response, array $args) {
+/*$app->get('/', function (Request $request, Response $response, array $args) {
     
     $response->getBody()->write("Bienvenido!");
     return $response;
-});
+});*/
 
 $app->post("/", \UsuarioController::class . ':ValidarUsers' ); 
 
