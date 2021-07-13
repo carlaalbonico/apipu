@@ -7,7 +7,7 @@ class AccesoDatos{
     {
         try {
             //$this->objetoPDO = new PDO('mysql:host=db4free.net:3306;dbname=esparaprobar;charset=utf8', 'oPl5yOpaH6','vNDdAYfeGb',array(PDO::ATTR_EMULATE_PREPARES => false, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-            $this->objetoPDO = new PDO('mysql:host=localhost:3306;dbname=id17242150_pushuptienda;charset=utf8', 'oPl5yOpaH6','BlBDhVx68GPiG~WP',array(PDO::ATTR_EMULATE_PREPARES => false, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+            $this->objetoPDO = new PDO('mysql:host=localhost:3306;dbname=id17242150_pushuptienda;charset=utf8', 'id17242150_opl5yopah6','BlBDhVx68GPiG~WP',array(PDO::ATTR_EMULATE_PREPARES => false, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
         //$this->objetoPDO = new PDO('mysql:host='.getenv('ServidorMySQL').';dbname='.getenv('Database').';charset=utf8', getenv("Usuario"), getenv('Pass'), array(PDO::ATTR_EMULATE_PREPARES => false, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
         //$this->objetoPDO->exec("SET CHARACTER SET utf8");
         } catch (PDOException $e) {
