@@ -25,11 +25,11 @@
                     $response->getBody()->write("Acceso correcto");
                 }
                 else{
-                    $response->getBody()->write("Contraseña incorrecta");
+                    $response->getBody()->write("La contraseña es incorrecta");
                 }
         }
         else{
-            $response->getBody()->write("Usuario incorrecto");
+            $response->getBody()->write("El usuario es incorrecto");
         }
   
     return $response;

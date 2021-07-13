@@ -55,6 +55,12 @@ $app->group("/signin", function (RouteCollectorProxy $group) {
     $group->post('/enviar[/]', \UsuarioController::class . ':RegistrarUser' );
 }); 
 
+$app->group('/producto', function (RouteCollectorProxy $group) {
+    $group->post('/agregar[/]', \productoController::class . ':CrearProducto' );
+    $group->get('[/]', \productoController::class . ':RetornarProductos' );
+});
+
+
 $app->run();
 
     
