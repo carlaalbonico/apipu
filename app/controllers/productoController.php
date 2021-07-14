@@ -12,9 +12,9 @@
             $producto = new Producto();
             
             $producto->setNombre($nombre);
-            $producto->setTipoTurismo($tipoTurismo);
-            $producto->setPais($pais);
-            $producto->setProvincia($provincia);
+            $producto->setDesc($desc);
+            $producto->setPrecio($precio);
+            $producto->setCategoria($categoria);
 
             Producto::guardarProducto($producto);
 
