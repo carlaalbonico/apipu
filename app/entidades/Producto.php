@@ -4,7 +4,7 @@
         public $desc;         
         public $precio;
         public $categoria;
-        public $imagenPath;
+        
 
 
         public function __construct(){
