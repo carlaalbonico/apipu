@@ -18,8 +18,10 @@ use Slim\Routing\RouteContext;
 require __DIR__ . '/../vendor/autoload.php';
 
 require __DIR__ . '/entidades/Usuario.php';
+require __DIR__ . '/entidades/Producto.php';
 require __DIR__ . '/accesoDatos/accesoDatos.php';
 require __DIR__ . '/controllers/usuarioController.php';
+require __DIR__ . '/controllers/productoController.php';
 require __DIR__ . '/funciones/funciones.php';
 
 
@@ -54,6 +56,10 @@ $app->post("/", \UsuarioController::class . ':ValidarUsers' );
 $app->group("/signin", function (RouteCollectorProxy $group) {
     $group->post('/enviar[/]', \UsuarioController::class . ':RegistrarUser' );
 }); 
+$app->group('/producto', function (RouteCollectorProxy $group) {
+    $group->post('/agregar[/]', \productoController::class . ':CrearProducto' );
+    $group->get('/mostrar[/]', \productoController::class . ':RetornarProductos' );
+});
 
 $app->run();
 
