@@ -1,7 +1,7 @@
 <?php
     class Producto {
         public $nombre;
-        public $desc;         
+        public $descrip;         
         public $precio;
         public $categoria;
         
@@ -17,9 +17,9 @@
             $this->nombre = $nombre;
         }
 
-        public function setDesc($desc){
+        public function setDesc($descrip){
             
-            $this->desc = $desc;
+            $this->descrip = $descrip;
         }
 
         public function setPrecio($precio){
@@ -38,9 +38,9 @@
             return $this->nombre;
         }
 
-        public function getDesc(){
+        public function getDescrip(){
             
-            return $this->desc;
+            return $this->descrip;
         }
 
         public function getPrecio(){

@@ -5,14 +5,14 @@
         public function CrearProducto($request, $response, $args){
             $listaDeParametros = $request->getParsedBody();
             $nombre = $listaDeParametros['nombre'];
-            $desc = $listaDeParametros['desc'];
+            $descrip = $listaDeParametros['descrip'];
             $precio = $listaDeParametros['precio'];
             $categoria = $listaDeParametros['categoria'];
 
             $producto = new Producto();
             
             $producto->setNombre($nombre);
-            $producto->setDesc($desc);
+            $producto->setDescrip($descrip);
             $producto->setPrecio($precio);
             $producto->setCategoria($categoria);
 
