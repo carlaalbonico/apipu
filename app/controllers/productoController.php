@@ -12,7 +12,7 @@
             $producto = new Producto();
             
             $producto->setNombre($nombre);
-            $producto->setDescrip($descrip);
+            $producto->setDesc($descrip);
             $producto->setPrecio($precio);
             $producto->setCategoria($categoria);
 

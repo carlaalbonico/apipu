@@ -57,7 +57,7 @@
         public static function guardarProducto($producto){
             $objAccesoDatos = AccesoDatos::obtenerInstancia();
             $consulta = $objAccesoDatos->prepararConsulta("INSERT INTO producto(nombre, descrip, precio, categoria) VALUES (?,?,?,?)");
-            $consulta->execute(array($producto->getNombre(), $producto->getDesc(), $producto->getPrecio(), $producto->getCategoria()));
+            $consulta->execute(array($producto->getNombre(), $producto->getDescrip(), $producto->getPrecio(), $producto->getCategoria()));
         }
 
         public static function obtenerProductos(){
