@@ -6,8 +6,7 @@ class AccesoDatos{
     private function __construct()
     {
         try {
-            $this->objetoPDO = new PDO('mysql:host=bklatxdpktyqy8vxwsxv-mysql.services.clever-cloud.com:3306;dbname=bklatxdpktyqy8vxwsxv;charset=utf8', 'ufnyskzelrhfnpni','4m7fe2fbyAm9YQSsp20H',array(PDO::ATTR_EMULATE_PREPARES => false, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-            //$this->objetoPDO = new PDO('mysql:host=ec2-3-226-134-153:5432.compute-1.amazonaws.com;dbname=d8hcuvmh42iuj1;charset=utf8', 'tjzmuskgxawugl','4a90684fb6c0d551a28b5f67c578bbe4079064d3899401251a8f25c5abf7cf8b',array(PDO::ATTR_EMULATE_PREPARES => false, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+            $this->objetoPDO = new PDO('mysql:host=remotemysql.com:3306;dbname=oPl5yOpaH6;charset=utf8', 'oPl5yOpaH6','vNDdAYfeGb',array(PDO::ATTR_EMULATE_PREPARES => false, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
         //$this->objetoPDO = new PDO('mysql:host='.getenv('ServidorMySQL').';dbname='.getenv('Database').';charset=utf8', getenv("Usuario"), getenv('Pass'), array(PDO::ATTR_EMULATE_PREPARES => false, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
         //$this->objetoPDO->exec("SET CHARACTER SET utf8");
         } catch (PDOException $e) {
@@ -28,7 +27,10 @@ class AccesoDatos{
         return $this->objetoPDO->prepare($consultaSQL);
     }
 
-    
+    public function obtenerUltimoId()
+    {
+        return $this->objetoPDO->lastInsertId();
+    }
 
     public function __clone()
     {
