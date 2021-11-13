@@ -1,5 +1,6 @@
 <?php
     class Producto {
+        public $id; 
         public $nombre;
         public $descrip;         
         public $precio;
@@ -10,7 +11,9 @@
         public function __construct(){
             
         }
-
+        public  function setId($id){
+            $this->id= $id;
+        }
 
         public function setNombre($nombre){
             
@@ -32,6 +35,11 @@
             $this->categoria = $categoria;
         }
        
+
+        public function getId(){
+            
+            return $this->id;
+        }
 
         public function getNombre(){
             
@@ -66,6 +74,20 @@
             $consulta->execute();
     
             return $consulta->fetchAll(PDO::FETCH_CLASS, 'Producto');
+        }
+
+        public static function modificarProducto(){
+            $objAccesoDatos = AccesoDatos::obtenerInstancia();
+            $consulta = $objAccesoDatos->prepararConsulta("UPDATE producto SET nombre = ?, descrip = ?, precio = ?, categoria = ? WHERE id = ?");
+            $consulta->execute(array($this->nombre, $this->descrip, $this->precio, $this->categoria, $this->id));
+    
+        }
+        public static function borrarProducto(){
+            $objAccesoDatos = AccesoDatos::obtenerInstancia();
+            $consulta = $objAccesoDatos->prepararConsulta("DELETE FROM producto WHERE id = ?");
+            $consulta->execute(array( $this->id));
+    
+           
         }
 
     }
