@@ -60,7 +60,7 @@ $app->group('/producto', function (RouteCollectorProxy $group) {
     $group->post('/agregar[/]', \productoController::class . ':CrearProducto' );
     $group->get('/mostrar[/]', \productoController::class . ':RetornarProductos' );
     $group->post('/{id}', \productoController::class . ':ModificarProductos' );
-    $group->delete('/Borrar/{id}[/]', \productoController::class . ':BorrarProductos' );
+    $group->post('/borrar/{id}[/]', \productoController::class . ':BorrarProductos' );
 });
 
 $app->run();

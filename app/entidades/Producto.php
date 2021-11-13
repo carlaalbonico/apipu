@@ -79,13 +79,13 @@
         public static function modificarProducto(){
             $objAccesoDatos = AccesoDatos::obtenerInstancia();
             $consulta = $objAccesoDatos->prepararConsulta("UPDATE producto SET nombre = ?, descrip = ?, precio = ?, categoria = ? WHERE id = ?");
-            $consulta->execute(array($this->nombre, $this->descrip, $this->precio, $this->categoria, $this->id));
+            $consulta->execute(array($producto->getNombre(), $producto->getDescrip(), $producto->getPrecio(), $producto->getCategoria(), $id->getId()));
     
         }
         public static function borrarProducto(){
             $objAccesoDatos = AccesoDatos::obtenerInstancia();
             $consulta = $objAccesoDatos->prepararConsulta("DELETE FROM producto WHERE id = ?");
-            $consulta->execute(array( $this->id));
+            $consulta->execute(array( $id->getId()));
     
            
         }
