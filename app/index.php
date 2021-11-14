@@ -59,7 +59,7 @@ $app->group("/signin", function (RouteCollectorProxy $group) {
 $app->group('/producto', function (RouteCollectorProxy $group) {
     $group->post('/agregar[/]', \productoController::class . ':CrearProducto' );
     $group->get('/mostrar[/]', \productoController::class . ':RetornarProductos' );
-    $group->post('/{id}', \productoController::class . ':ModificarProductos' );
+    $group->get('/{id}', \productoController::class . ':ModificarProductos' );
     $group->post('/borrar/{id}[/]', \productoController::class . ':BorrarProductos' );
 });
 
