@@ -51,7 +51,7 @@ $app->add(function (Request $request, RequestHandlerInterface $handler): Respons
     return $response;
 });*/
 
-$app->post("/", \UsuarioController::class . ':ValidarUsers' ); 
+$app->post("/login[/]", \UsuarioController::class . ':ValidarUsers' ); 
 
 $app->group("/signin", function (RouteCollectorProxy $group) {
     $group->post('/enviar[/]', \UsuarioController::class . ':RegistrarUser' );
